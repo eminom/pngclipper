@@ -113,6 +113,19 @@ namespace PngClipperCore
                     break;
                 }
             }
+
+            //~ Fix
+            int width = rightBound - leftBound;
+            int height = bottomBound - topBound;
+            if (width % 2 != 0 && rightBound < bm.Width - 1 )
+            {
+                rightBound += 1;
+            }
+            if (height % 2 != 0 && bottomBound < bm.Height - 1)
+            {
+                bottomBound += 1;
+            }
+
             return new Rectangle(leftBound, topBound, rightBound - leftBound, bottomBound - topBound);
         }
 

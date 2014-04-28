@@ -4,3 +4,6 @@ PngClipperCmdLine/bin
 PngClipperCmdLine/obj
 PngClipperCore/bin
 PngClipperCore/obj
+*.suo
+*.exe
+*.dll
